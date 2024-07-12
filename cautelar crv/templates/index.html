@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitoramento de Ligações(CRV)</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Monitoramento de Ligações (CRV)</h1>
+        <p><strong>Quantidade de Ligações:</strong> {{ data['cont_lig'] }}</p>
+        <p><strong>Produtivas:</strong> {{ data['porcentagem_prod'] }}% ({{ data['cont_prod'] }})</p>
+        <p><strong>Improdutivas:</strong> {{ data['porcentagem_improd'] }}% ({{ data['improdutivas'] }})</p>
+        <p><strong>Shortcalls:</strong> {{ data['porcentagem_short'] }}% ({{ data['cont_shortcall'] }})</p>
+        <p><strong>Status:</strong> {{ data['status'] }}</p>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
